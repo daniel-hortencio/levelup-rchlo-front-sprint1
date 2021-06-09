@@ -1,0 +1,27 @@
+.Breadcrumbs {
+    display: none;
+
+    @include min-lg {
+        display: block;
+        border-bottom: solid 1px $gray-200;
+        padding: 0.5rem 0 1rem 0;
+    }
+
+    &__path {
+        display: flex;
+    }
+
+    &__path-item {
+        font-size: 0.8125rem;
+        font-weight: $normal;
+    }
+
+    &__path-item + li {
+        margin-left: 0.5rem;
+        position: relative;
+        ::before {
+            content: "/";
+            margin-right: 0.5rem;
+        }
+    }
+}

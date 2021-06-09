@@ -7,7 +7,8 @@
     <title>Riachuelo</title>
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script>
       document.write(
         '<script src="http://' +
@@ -18,318 +19,511 @@
     </script>
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="assets/riachuelo.svg" alt="" />
-      </h1>
-      <input type="search" placeholder="O quê você está procurando" />
-      <nav>
-        <ul>
-          <li><a href="">Novidades</a></li>
-          <li><a href="">Feminimo</a></li>
-          <li><a href="">Masculino</a></li>
-          <li><a href="">Infantil</a></li>
-          <li><a href="">Moda Íntima</a></li>
-          <li><a href="">Calçados</a></li>
-          <li><a href="">Acessórios e Relógios</a></li>
-          <li><a href="">Beleza e Perfume</a></li>
-          <li><a href="">Casa Riachuelo</a></li>
-          <li><a href="">Eletrônicos</a></li>
-          <li><a href="">Personagens</a></li>
-          <li><a href="">Outlet</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="breadcrumbs">
-        <nav>
-          <ol>
-            <li><a href="">Home</a></li>
-            <li><a href="">Infantil</a></li>
-            <li><a href="">Personagens</a></li>
-            <li>Mario Bros</li>
-          </ol>
+    <header class="Header" aria-scroll-page="false" id="header">
+      <div class="Container">
+        <div class="Header__logo-and-toggle">
+          <button class="Header__toggle-menu" id="toggle-menu" aria-expanded="false">
+            <img src="assets/images/icons/menu.svg" alt="Abrir menu" class="icon-open" />
+            <img src="assets/images/icons/close.svg" alt="Abrir menu" class="icon-close" />
+          </button>
+
+          <h1 class="Header__logo">
+            <picture>
+              <source media="(min-width:1280px)" srcset="assets/images/logo/riachuelo.svg">
+              <img src="assets/images/logo/rchlo.svg" alt="Riachuelo" style="width:auto;">
+            </picture>          
+          </h1>
+        </div>
+
+        <div class="Header__search-bar" aria-hidden="false" id="search-bar">
+          <img width="16px" src="assets/images/icons/ico-search.svg"/> 
+          <input type="search" placeholder="O quê você está procurando" />
+        </div>
+
+        <nav class="Header__navbar" aria-expanded="false" id="navbar">
+          <ul class="Header__navbar-list">
+            <li class="Header__navbar-list-item"><a href="">Novidades</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Feminimo</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Masculino</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Infantil</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Moda Íntima</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Calçados</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Acessórios e Relógios</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Beleza e Perfume</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Casa Riachuelo</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Eletrônicos</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Personagens</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+            <li class="Header__navbar-list-item"><a href="">Outlet</a><img src="assets/images/icons/ico-arrow-down.svg" alt="Seta" width="12px"></li>
+          </ul>
         </nav>
-      </section>
-      <section class="filters">
-        <ul>
-          <li>Tamanho</li>
-          <li>Cor</li>
-          <li>Departamento</li>
-          <li>Categoria</li>
-          <li>Manga</li>
-        </ul>
+
+      </div>
+    </header>
+    <main id="main" class="Main">
+      <div class="Container Main__container">
+        <section class="Breadcrumbs">
+          <nav>
+            <ol class="Breadcrumbs__path">
+              <li class="Breadcrumbs__path-item"><a href="">Home</a></li>
+              <li class="Breadcrumbs__path-item"><a href="">Infantil</a></li>
+              <li class="Breadcrumbs__path-item"><a href="">Personagens</a></li>
+              <li class="Breadcrumbs__path-item"><span>Mario Bros</span></li>
+            </ol>
+          </nav>
+        </section>
+        <section class="Filters" aria-expanded="false" id="filters-options-container">
+          <button class="Filters__toggle-mobile-filters" id="filters-toggle">
+            FILTRAR <img src="assets/images/icons/filters.svg" alt="Icone" />
+          </button>
+          <ul class="Filters__options">
+
+            <div>
+              <li class="Filters__mobile-header">
+                <p>
+                  <img src="assets/images/icons/filters.svg" alt="Icone" /> FILTRAR 
+                </p>
+                <button class="Filters__mobile-close-filters" id="filters-close">                
+                  <img src="assets/images/icons/close.svg" alt="Fechar filtros"/>
+                </button>
+              </li>
+              <li class="Filters__options-item">Tamanho</li>
+              <li class="Filters__options-item">Cor</li>
+              <li class="Filters__options-item">Departamento</li>
+              <li class="Filters__options-item">Categoria</li>
+              <li class="Filters__options-item">Manga</li>   
+            </div>
+
+            <div class="Filters__mobile-constrols">
+              <p>12 itens</p>
+              <div>
+                <button class="Button-secondary">
+                  LIMPAR
+                </button>
+                <button class="Button-primary">
+                  APLICAR
+                </button>
+              </div>
+            </div>
+
+          </ul>
+          <div id="filters-modal-background"></div>
+        </section>
+
+        <section class="Products">
+          <ol class="GridContainer">
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c1.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>              
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c2.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c3.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c4.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c5.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c6.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c7.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c8.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c9.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c10.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c11.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+            <li class="CardProduct">
+              <div>
+                <div class="CardProduct__image-container">
+                  <img src="assets/images/pictures/c12.webp" alt="Camisa 1" />
+                </div>
+                <div class="CardProduct__legend">
+                  <p class="CardProduct__legend-title">
+                    Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                  </p>
+                  <p class="CardProduct__legend-price">R$ 199,90</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <footer class="Footer">
+
+      <div class="Container Footer__offers-container">
+        <div class="Offers">
+          <p class="Offers__title">Receba ofertas e novidades por e-mail</p>
+          <form action="/" class="Offers__form">
+            <div class="Offers__form-row">
+              <div class="Offers__interests-container" aria-expanded="false" id="interests-container">
+                <button type="button" id="interests-container-toggle">
+                  Interesses
+                </button>
+                <ul id="interests-modal">
+                  <li class="Offers__interests-option"><input type="checkbox" name="todos" value="Selecionar todos"> Selecionar todos</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="novidades" value="Novidades"> Novidades </li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="feminino" value="Feminino"> Feminino</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="masculino" value="Masculino"> Masculino</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="infantil" value="Infantil"> Infantil </li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="teen" value="Teen"> Teen</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="calcados" value="Calçados"> Calçados</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="acessorios" value="Acessórios e relógios"> Acessórios e relógios</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="beleza" value="Beleza e Perfume"> Beleza e Perfume</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="casa" value="Casa riachuelo"> Casa riachuelo</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="eletronicos" value="Eletrônicos"> Eletrônicos</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="geek" value="Geek"> Geek</li>
+                  <li class="Offers__interests-option"><input type="checkbox" name="outlet" value="Outlet"> Outlet</li>
+                </ul>
+                <div id="interests-modal-background"></div>
+              </div>
+              <div class="Offers__input-container">
+                <input type="email" placeholder="Digite aqui seu e-mail" />
+              </div>
+            </div>
+            <button type="submit" disabled="true">Cadastrar</button>
+          </form>
+        </div>
+        <div class="MobileApps">
+          <p class="MobileApps__title">Baixe nosso App</p>
+          <a href="https://play.google.com/store/apps/details?id=br.com.riachuelo.app" target="_blank" rel="noreferrer noopener">
+            <img src="assets/images/icons/google-play.webp" alt="Google Play" />
+          </a>
+          <a href="https://apps.apple.com/us/app/riachuelo/id1488532824?ls=1" target="_blank" rel="noreferrer noopener">
+            <img src="assets/images/icons/app-store.webp" alt="App Store" />
+          </a>
+        </div>
+      </div>
+
+      <section class="Contacts-and-Links">
+        <div class="Container Contacts-and-Links__container">        
+          <div class="Contacts">
+            <div class="Container">
+              <div class="Contacts__cards-container">
+                <a href="#" class="Contacts__card-link">        
+                  <img width="30px" src="assets/images/icons/ico-attendance.svg" alt="Atendimento" />
+                  <p>Atendimento</p>         
+                </a>
+                <a href="#" class="Contacts__card-link">             
+                  <img
+                    width="36px"
+                    src="assets/images/icons/ico-faq.svg"
+                    alt="Perguntas Frequentes"
+                  />
+                  <p>Perguntas Frequentes</p>  
+                </a>
+                <a href="#" class="Contacts__card-link">            
+                  <img
+                    width="32px"
+                    src="assets/images/icons/ico-invoice-and-statement.svg"
+                    alt="Fatura e Extrato"
+                  />
+                  <p>Fatura e Extrato</p>   
+                </a>
+                <a href="#" class="Contacts__card-link">            
+                  <img
+                    width="40px"
+                    src="assets/images/icons/ico-work-with-us.svg"
+                    alt="Trabalhe Conosco"
+                  />
+                  <p>Trabalhe Conosco</p>   
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="Links">
+            <ul class="Links__container">
+              <li>
+                <div class="Accordion">              
+                  <button id="accordion-btn-1">
+                    <h3>Cartão Riachuelo</h3>
+                    <span id="accordion-icon-1">+</span>
+                  </button>   
+                  <ul aria-expanded="false" id="accordion-list-1">
+                    <li><a href="">Midway Financeira</a></li>
+                    <li><a href="">Saiba como adquirir</a></li>
+                    <li><a href="">Veja sua fatura e extrato</a></li>
+                    <li><a href="">Buscando quitar suas dívidas?</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="Accordion">
+                  <button id="accordion-btn-2">
+                    <h3>Sobre a Riachuelo</h3>
+                    <span id="accordion-icon-2">+</span>
+                  </button>              
+                  <ul aria-expanded="false" id="accordion-list-2">
+                    <li><a href="">A Empresa</a></li>
+                    <li><a href="">Portal de Fornecedores</a></li>
+                    <li><a href="">Relação com Investidores</a></li>
+                    <li><a href="">Assessoria de Imprensa</a></li>
+                    <li><a href="">Trabalhe Conosco</a></li>
+                    <li><a href="">Programa Jovem Aprendiz</a></li>
+                    <li><a href="">Cadastro de Startups</a></li>
+                    <li><a href="">Mapa do Site</a></li>
+                    <li><a href="">Guide Shop</a></li>
+                    <li><a href="">Venda na Riachuelo Marketplace</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="Accordion">              
+                  <button id="accordion-btn-3">
+                    <h3>Moda que Transforma</h3>
+                    <span id="accordion-icon-3">+</span>
+                  </button>  
+                  <ul aria-expanded="false" id="accordion-list-3">
+                    <li><a href="">Na prática</a></li>
+                    <li><a href="">Entre Costuras</a></li>
+                    <li><a href="">Jeans Mais Transparente</a></li>
+                    <li><a href="">Ações Covid-19</a></li>
+                    <li><a href="">Free Free</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="Accordion">              
+                  <button id="accordion-btn-4">
+                    <h3>Ajuda</h3>
+                    <span id="accordion-icon-4">+</span>
+                  </button>  
+                  <ul aria-expanded="false" id="accordion-list-4">
+                    <li><a href="">Atendimento</a></li>
+                    <li><a href="">Perguntas Frequentes</a></li>
+                    <li><a href="">Trocas e Devoluções</a></li>
+                    <li><a href="">Portal da Privacidade</a></li>
+                    <li><a href="">Política de Privacidade</a></li>
+                    <li><a href="">Termos e Condições de Uso</a></li>
+                    <li><a href="">Regras e Resultados de Sorteios</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section class="products">
-        <ol>
-          <li>
-            <div>
-              <img src="assets/c1.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c2.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c3.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c4.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c5.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c6.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c7.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c8.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c9.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c10.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c11.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="assets/c12.webp" alt="Camisa 1" />
-              <p>
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p>R$ 199,90</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-    </main>
-    <footer>
-      <div class="offers">
-        <p>Receba ofertas e novidades por e-mail</p>
-        <form action="/">
-          <input type="email" placeholder="Digite aqui seu e-mail" />
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
-      <div class="mobile-apps">
-        <p>Baixe nosso App</p>
-        <img src="assets/google-play.webp" alt="Google Play" />
-        <img src="assets/app-store.webp" alt="App Store" />
-      </div>
-      <div class="contacts">
-        <div>
-          <img width="50px" src="assets/ico-attendance.svg" alt="Atendimento" />
-          <p>Atendimento</p>
+      <div class="Container MoreInformations">
+        <div class="MoreInformations__payment">
+          <h3 class="MoreInformations__title">Formas de Pagamento</h3>
+          <div>
+            <img src="assets/images/icons/ico-cartao-rchlo1.webp" alt="" />
+            <img src="assets/images/icons/ico-cartao-rchlo2.webp" alt="" />
+            <img src="assets/images/icons/ico-cartao-rchlo3.webp" alt="" />
+            <img src="assets/images/icons/ico-cartao-visa.png" alt="" />
+            <img src="assets/images/icons/ico-cartao-master.webp" alt="" />
+            <img src="assets/images/icons/ico-cartao-amex.webp" alt="" />
+            <img src="assets/images/icons/ico-cartao-diners.png" alt="" />
+            <img src="assets/images/icons/ico-cartao-elo.png" alt="" />
+            <img src="assets/images/icons/ico-boleto.webp" alt="" />
+            <img src="assets/images/icons/ico-paypal.png" alt="" />
+          </div>
         </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-faq.svg"
-            alt="Perguntas Frequentes"
-          />
-          <p>Perguntas Frequentes</p>
+        <div class="MoreInformations__social">
+          <h3 class="MoreInformations__title">Siga a Riachuelo</h3>
+          <div class="MoreInformations__social-links">
+            <a href="https://www.facebook.com/Lojas.Riachuelo" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-facebook.svg" alt="" />
+            </a>
+            <a href="https://www.instagram.com/riachuelo/" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-instagram.svg" alt="" />
+              <p>RCHLO</p>
+            </a>
+            <a href="https://www.instagram.com/casariachuelo/" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-instagram.svg" alt="" />
+              <p>CASA RCHLO</p>
+            </a>
+            <a href="https://br.pinterest.com/riachuelo/" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-pinterest.svg" alt="" />
+            </a>
+            <a href="https://twitter.com/riachuelo" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-twitter.svg" alt="" />
+            </a>
+            <a href="https://www.youtube.com/user/lojasriachuelo" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-youtube.svg" alt="" />
+            </a>
+            <a href="https://www.linkedin.com/authwall?trk=ripf&trkInfo=AQEVB0DufCUI3QAAAXnrrJ4IDL3nkZBmAT5hR4bb8tCmOsCGQ7NelGjXigFv5Ke0aAg0TtcC0sKfgNjoTM4Bk5sqP4tGuBJuimU99PRqc2fzKjMPDavXQAmA_Ut5OulRHv6hJl4=&originalReferer=https://www.riachuelo.com.br/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Flojas-riachuelo-sa" target="_blank" rel="noreferrer noopener">
+              <img src="assets/images/icons/ico-linkedin.svg" alt="" />
+            </a>
+          </div>
         </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-invoice-and-statement.svg"
-            alt="Fatura e Extrato"
-          />
-          <p>Fatura e Extrato</p>
-        </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-work-with-us.svg"
-            alt="Trabalhe Conosco"
-          />
-          <p>Trabalhe Conosco</p>
+        <div class="MoreInformations__accessibility">
+          <h3 class="MoreInformations__title">Acessibilidade</h3>
+          <a href="https://www.riachuelo.com.br/acessibilidade-riachuelo/">
+            <img src="assets/images/icons/ico-a11y.webp" alt="" width="30px"/>
+          </a>
         </div>
       </div>
-      <div class="links">
-        <ul>
-          <li>
-            <div>
-              <h3>Cartão Riachuelo</h3>
-              <ul>
-                <li><a href="">Midway Financeira</a></li>
-                <li><a href="">Saiba como adquirir</a></li>
-                <li><a href="">Veja sua fatura e extrato</a></li>
-                <li><a href="">Buscando quitar suas dívidas?</a></li>
-              </ul>
+
+      <div class="Copyright">
+        <div class="Container Copyright__container">
+          <div class="Copyright__text">
+            <p>
+              © Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo
+              S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil CEP
+              07250-130 CNPJ 33.200.056/0441-97 | IE 796.420.926.112 | SAC
+              4003-0515.
+            </p>
+            <div class="Copyright__more-informations" id="copyright-more-informations" aria-expanded="false">
+              <p>
+                Direção de fotografia de produtos por Adriano Adrião.
+                Pagamento com Cartão Riachuelo, parcelas mínimas de R$ 15,00. Para os
+                demais cartões Visa, Mastercard, Elo, Diners, Hipercard e American
+                Express, parcelas mínimas de R$ 30,00. * COMPRE NO SITE e RETIRE NA
+                LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte as lojas
+                participantes nas opções de frete do seu pedido, conforme CEP de
+                entrega cadastrado. Frete único de R$ 4,99 para Sul e Sudeste em
+                compras a partir de R$ 129,00. Demais regiões o valor estará sujeito a
+                variações. Condição por tempo indeterminado, para tipo de entrega
+                “normal”. Preços, promoções, condições de pagamento, valores de frete
+                e disponibilidade de estoque são aplicados somente nas compras
+                efetuadas na loja online Riachuelo. Existe uma limitação de peças
+                iguais no mesmo pedido que muda de acordo com o tipo de produto. Em
+                caso de divergência de valores entre a página do produto e a Sacola de
+                Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola
+                de Compras.
+              </p>
             </div>
-          </li>
-          <li>
-            <div>
-              <h3>Sobre a Riachuelo</h3>
-              <ul>
-                <li><a href="">A Empresa</a></li>
-                <li><a href="">Portal de Fornecedores</a></li>
-                <li><a href="">Relação com Investidores</a></li>
-                <li><a href="">Assessoria de Imprensa</a></li>
-                <li><a href="">Trabalhe Conosco</a></li>
-                <li><a href="">Programa Jovem Aprendiz</a></li>
-                <li><a href="">Cadastro de Startups</a></li>
-                <li><a href="">Mapa do Site</a></li>
-                <li><a href="">Guide Shop</a></li>
-                <li><a href="">Venda na Riachuelo Marketplace</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Moda que Transforma</h3>
-              <ul>
-                <li><a href="">Na prática</a></li>
-                <li><a href="">Entre Costuras</a></li>
-                <li><a href="">Jeans Mais Transparente</a></li>
-                <li><a href="">Ações Covid-19</a></li>
-                <li><a href="">Free Free</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Ajuda</h3>
-              <ul>
-                <li><a href="">Atendimento</a></li>
-                <li><a href="">Perguntas Frequentes</a></li>
-                <li><a href="">Trocas e Devoluções</a></li>
-                <li><a href="">Portal da Privacidade</a></li>
-                <li><a href="">Política de Privacidade</a></li>
-                <li><a href="">Termos e Condições de Uso</a></li>
-                <li><a href="">Regras e Resultados de Sorteios</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="payment">
-        <h3>Formas de Pagamento</h3>
-        <img src="assets/ico-cartao-rchlo1.webp" alt="" />
-        <img src="assets/ico-cartao-rchlo2.webp" alt="" />
-        <img src="assets/ico-cartao-rchlo3.webp" alt="" />
-        <img src="assets/ico-cartao-visa.png" alt="" />
-        <img src="assets/ico-cartao-master.webp" alt="" />
-        <img src="assets/ico-cartao-amex.webp" alt="" />
-        <img src="assets/ico-cartao-diners.png" alt="" />
-        <img src="assets/ico-cartao-elo.png" alt="" />
-        <img src="assets/ico-boleto.webp" alt="" />
-        <img src="assets/ico-paypal.png" alt="" />
-      </div>
-      <div class="social">
-        <h3>Siga a Riachuelo</h3>
-        <img src="assets/ico-facebook.svg" alt="" />
-        <img src="assets/ico-instagram.svg" alt="" />
-        <p>RCHLO</p>
-        <img src="assets/ico-instagram.svg" alt="" />
-        <p>CASA RCHLO</p>
-        <img src="assets/ico-pinterest.svg" alt="" />
-        <img src="assets/ico-twitter.svg" alt="" />
-        <img src="assets/ico-youtube.svg" alt="" />
-        <img src="assets/ico-linkedin.svg" alt="" />
-      </div>
-      <div class="accessibility">
-        <h3>Acessibilidade</h3>
-        <img src="assets/ico-a11y.webp" alt="" />
-      </div>
-      <div class="copyright">
-        <p>
-          © Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo
-          S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil CEP
-          07250-130 CNPJ 33.200.056/0441-97 | IE 796.420.926.112 | SAC
-          4003-0515.Direção de fotografia de produtos por Adriano Adrião.
-          Pagamento com Cartão Riachuelo, parcelas mínimas de R$ 15,00. Para os
-          demais cartões Visa, Mastercard, Elo, Diners, Hipercard e American
-          Express, parcelas mínimas de R$ 30,00. * COMPRE NO SITE e RETIRE NA
-          LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte as lojas
-          participantes nas opções de frete do seu pedido, conforme CEP de
-          entrega cadastrado. Frete único de R$ 4,99 para Sul e Sudeste em
-          compras a partir de R$ 129,00. Demais regiões o valor estará sujeito a
-          variações. Condição por tempo indeterminado, para tipo de entrega
-          “normal”. Preços, promoções, condições de pagamento, valores de frete
-          e disponibilidade de estoque são aplicados somente nas compras
-          efetuadas na loja online Riachuelo. Existe uma limitação de peças
-          iguais no mesmo pedido que muda de acordo com o tipo de produto. Em
-          caso de divergência de valores entre a página do produto e a Sacola de
-          Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola
-          de Compras.
-        </p>
-      </div>
-      <div class="complaints">
-        <img src="assets/ra1000.webp" alt="" />
+
+            <button class="Copyright__button-read-more" id="copyright-more-informations-toggle">Ler mais</button>
+          </div>
+          <div class="Copyright__complaints">
+            <img src="assets/images/icons/ra1000.webp" alt="" />
+          </div>
+        </div>
       </div>
     </footer>
   </body>
+
+  <script src="./scripts/changeMenu.js"></script>
+  <script src="./scripts/fixingHeaderWhenScrolling.js"></script>
+  <script src="./scripts/handleAccordionLinks.js"></script>
+  <script src="./scripts/copyrightReadMore.js"></script>
+  <script src="./scripts/chandeInterestsModal.js"></script>
+  <script src="./scripts/changeFiltersMobileModal.js"></script>
 </html>

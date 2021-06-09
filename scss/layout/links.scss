@@ -1,0 +1,14 @@
+.Links {
+    @include min-lg {
+        border-left: solid 1px $gray-300;
+        padding-left: 6rem;
+    }
+
+    &__container {
+        @include min-lg {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            width: 100%;
+        }
+    }
+}

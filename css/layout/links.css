@@ -1,0 +1,19 @@
+/* Error: Undefined mixin.
+ *   ,
+ * 2 | /     @include min-lg {
+ * 3 | |         border-left: solid 1px $gray-300;
+ * 4 | |         padding-left: 6rem;
+ * 5 | \     }
+ *   '
+ *   scss\layout\links.scss 2:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502  \250c      @include min-lg {\a 3 \2502  \2502          border-left: solid 1px $gray-300;\a 4 \2502  \2502          padding-left: 6rem;\a 5 \2502  \2514      }\a   \2575 \a   scss\\layout\\links.scss 2:5  root stylesheet";
+}

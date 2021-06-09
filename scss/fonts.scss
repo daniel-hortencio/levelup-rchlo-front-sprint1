@@ -1,0 +1,34 @@
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+@font-face {
+    font-family: Arboria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: $light;
+    src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-book.woff) format("woff");
+}
+@font-face {
+    font-family: Arboria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: $normal;
+    src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-medium.woff) format("woff");
+}
+@font-face {
+    font-family: Arboria;
+    font-style: normal;
+    font-display: swap;
+    font-weight: $bold;
+    src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-bold.woff) format("woff");
+}
+
+html,
+body,
+input {
+    font-size: 100%;
+    font-family: Arboria, sans-serif;
+    font-weight: $light;
+    -webkit-font-smoothing: antialiased;
+}

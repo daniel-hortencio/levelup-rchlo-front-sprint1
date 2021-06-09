@@ -1,0 +1,36 @@
+.MobileApps {
+    text-align: center;
+
+    @include min-lg {
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        @include uppercase;
+        font-size: 0.8rem;
+        font-weight: $bold;
+
+        @include min-lg {
+            font-size: 1rem;
+            margin: 0 2rem;
+            width: 10rem;
+        }
+    }
+
+    & a {
+        width: 8rem;
+
+        & img {
+            width: 8rem;
+        }
+
+        & + a {
+            margin-left: 4rem;
+            @include min-lg {
+                margin-left: 1rem;
+            }
+        }
+    }
+}

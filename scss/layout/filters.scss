@@ -1,0 +1,195 @@
+@mixin shadow-left {
+    -webkit-box-shadow: -10px 0px 16px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: -10px 0px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+@mixin shadow-top {
+    -webkit-box-shadow: 0px -6px 16px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -6px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+.Filters {
+    &__mobile-header {
+        padding: 1rem 0 3rem 0;
+        display: flex;
+
+        & > p {
+            font-size: 0.9rem;
+            font-weight: $normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            flex: auto;
+
+            & img {
+                margin-right: 0.5rem;
+            }
+        }
+
+        @include min-lg {
+            display: none;
+        }
+    }
+
+    &__mobile-close-filters {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition;
+
+        @include min-lg {
+            display: none;
+        }
+
+        & img {
+            width: 1.5rem;
+            position: relative;
+            opacity: 0.6;
+        }
+
+        &:hover {
+            background: $gray-200;
+        }
+    }
+
+    & > div {
+        display: none;
+        background: rgba(0, 0, 0, 0);
+        @include transition;
+    }
+
+    &[aria-expanded="true"] {
+        & ul {
+            transform: translateX(0);
+            @include shadow-left;
+        }
+
+        & > div {
+            display: initial;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            @include min-lg {
+                display: none;
+            }
+        }
+    }
+
+    &__options {
+        border-bottom: solid 1px $gray-200;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        height: 100vh;
+        min-width: 20rem;
+        background: #fff;
+        transform: translateX(100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include transition;
+
+        @include min-lg {
+            position: relative;
+            height: initial;
+            transform: translateX(0);
+            box-shadow: none !important;
+
+            & div:first-child {
+                display: flex;
+            }
+        }
+    }
+
+    &__options-item {
+        font-weight: $normal;
+        font-size: 0.7rem;
+        border-radius: 0.25rem;
+        padding: 1rem 2rem;
+        position: relative;
+        cursor: pointer;
+        border-bottom: solid 1px $gray-200;
+
+        @include uppercase;
+        @include transition;
+
+        @include min-lg {
+            padding: 1rem 2rem 1rem 0.5rem;
+            font-weight: $light;
+            border: none;
+        }
+
+        &::after {
+            content: url("../../assets/images/icons/ico-arrow-down.svg");
+            position: absolute;
+            top: 50%;
+            right: 0.5rem;
+            width: 0.6rem;
+            transform: rotate(-90deg) translateX(50%);
+
+            @include min-lg {
+                transform: rotate(0);
+                transform: translateY(-50%) translateX(0);
+            }
+        }
+
+        &:hover {
+            background-color: $gray-100;
+        }
+    }
+
+    &__mobile-constrols {
+        padding: 2rem;
+        @include shadow-top;
+
+        @include min-lg {
+            display: none;
+        }
+
+        p {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        div {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+    }
+
+    &__toggle-mobile-filters {
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        @include transition;
+
+        &:hover {
+            background: $gray-100;
+        }
+
+        & img {
+            margin-left: 0.5rem;
+        }
+
+        @include min-lg {
+            display: none;
+        }
+    }
+}

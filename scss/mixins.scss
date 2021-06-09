@@ -1,0 +1,31 @@
+@mixin min-sm {
+    @media (min-width: $sm) {
+        @content;
+    }
+}
+
+@mixin min-md {
+    @media (min-width: $md) {
+        @content;
+    }
+}
+
+@mixin min-lg {
+    @media (min-width: $lg) {
+        @content;
+    }
+}
+
+@mixin min-xl {
+    @media (min-width: $xl) {
+        @content;
+    }
+}
+
+@mixin transition {
+    transition: all 0.3s;
+}
+
+@mixin uppercase {
+    text-transform: uppercase;
+}

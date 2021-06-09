@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Arboria;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-book.woff) format("woff");
+}
+@font-face {
+  font-family: Arboria;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-medium.woff) format("woff");
+}
+@font-face {
+  font-family: Arboria;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://midia.fotos-riachuelo.com.br/spa-storefront/public/fonts/arboria-bold.woff) format("woff");
+}
+html,
+body,
+input {
+  font-size: 100%;
+  font-family: Arboria, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Container {
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.GridContainer {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 600px) {
+  .GridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 960px) {
+  .GridContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+  .GridContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.Button-primary {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.Button-secondary {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  border: solid 1px #a4a1a1;
+  transition: all 0.3s;
+}
+.Button-secondary:hover {
+  background: #f6f6f6;
+  border-color: initial;
+}
+
+.Test {
+  border: solid 1px red;
+}
+
+/*# sourceMappingURL=custom.css.map */

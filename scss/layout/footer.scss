@@ -1,0 +1,17 @@
+.Footer {
+    padding-top: 2rem;
+
+    &__offers-container {
+        margin-bottom: 2rem;
+    }
+
+    @include min-lg {
+        &__offers-container {
+            display: flex;
+            width: 100%;
+            & > div:first-child {
+                flex: auto;
+            }
+        }
+    }
+}

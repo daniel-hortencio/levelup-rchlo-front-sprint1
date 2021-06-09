@@ -1,0 +1,69 @@
+.MoreInformations {
+    padding: 2rem 10vw;
+
+    @include min-lg {
+        display: grid;
+        grid-template-columns: auto 25rem 10rem;
+        grid-template-rows: 1fr;
+        gap: 6rem;
+        padding: 2rem 1rem;
+    }
+
+    &__payment {
+        display: none;
+        @include min-lg {
+            display: initial;
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__title {
+        @include uppercase;
+        font-weight: $bold;
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include min-lg {
+            text-align: left;
+            font-size: 1rem;
+        }
+    }
+
+    &__social {
+        margin-bottom: 1rem;
+        @include min-lg {
+            margin-bottom: 0;
+        }
+    }
+
+    &__social-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        & a {
+            text-align: center;
+
+            img {
+                margin-bottom: 0.2rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                max-width: 3rem;
+            }
+        }
+    }
+
+    &__accessibility {
+        text-align: center;
+
+        @include min-lg {
+            text-align: left;
+        }
+    }
+}

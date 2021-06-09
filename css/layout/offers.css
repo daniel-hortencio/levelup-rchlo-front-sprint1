@@ -1,0 +1,21 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 9  | /     @include min-lg {
+ * 10 | |         margin-bottom: 0;
+ * 11 | |         display: flex;
+ * 12 | |         align-items: center;
+ * 13 | |         flex: auto;
+ * 14 | \     }
+ *    '
+ *   scss\layout\offers.scss 9:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 9  \2502  \250c      @include min-lg {\a 10 \2502  \2502          margin-bottom: 0;\a 11 \2502  \2502          display: flex;\a 12 \2502  \2502          align-items: center;\a 13 \2502  \2502          flex: auto;\a 14 \2502  \2514      }\a    \2575 \a   scss\\layout\\offers.scss 9:5  root stylesheet";
+}

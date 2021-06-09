@@ -1,0 +1,220 @@
+@mixin shadow-md {
+    -webkit-box-shadow: 0px 6px 12px #80808029;
+    box-shadow: 0px 6px 12px #80808029;
+}
+
+.Header {
+    border-bottom: solid 1px $gray-200;
+    padding-top: 0.5rem;
+    position: fixed;
+    z-index: 2;
+    height: 7.1rem;
+    width: 100%;
+    background: #fff;
+    @include transition;
+
+    @include min-lg {
+        padding-top: 1rem;
+        z-index: 2;
+        position: relative;
+        height: 9rem;
+
+        &[aria-scroll-page="true"] {
+            position: fixed;
+            animation: slideToBottom 0.3s;
+            @include shadow-md;
+        }
+    }
+
+    &__logo-and-toggle {
+        display: grid;
+        grid-template-columns: 3rem 1fr;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        @include min-lg {
+            display: block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__toggle-menu {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition;
+
+        @include min-lg {
+            display: none;
+        }
+
+        & img {
+            width: 1.5rem;
+            position: relative;
+            opacity: 0.6;
+        }
+
+        &:hover {
+            background: $gray-200;
+        }
+
+        .icon-open {
+            display: initial;
+        }
+
+        .icon-close {
+            display: none;
+        }
+
+        &[aria-expanded="true"] {
+            .icon-open {
+                display: none;
+            }
+
+            .icon-close {
+                display: initial;
+            }
+        }
+    }
+
+    &__search-bar {
+        border: solid 1px;
+        border-radius: 0.25rem;
+        padding: 0.25rem 1rem;
+        display: flex;
+        align-items: center;
+
+        &[aria-hidden="true"] {
+            display: none;
+        }
+
+        @include min-lg {
+            margin-bottom: 0.5rem;
+            &[aria-hidden="true"] {
+                display: flex;
+            }
+        }
+
+        & img {
+            opacity: 0.6;
+            margin-right: 0.5rem;
+        }
+
+        & input {
+            width: 100%;
+        }
+    }
+
+    &__navbar {
+        position: fixed;
+        top: 5rem;
+        z-index: 2;
+        left: -12rem;
+        width: 0;
+        height: calc(100vh - 5rem);
+
+        & ul {
+            margin-left: -12rem;
+            width: 12rem;
+            background-color: #fff;
+            border-top: solid 1px;
+            padding-top: 0.5rem;
+        }
+
+        &[aria-expanded="true"] {
+            left: 0;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+
+            & ul {
+                margin-left: 0;
+                @include transition;
+
+                width: 80vw;
+                height: 100%;
+            }
+        }
+
+        @include min-lg {
+            position: relative;
+            height: auto;
+            width: initial !important;
+            left: auto;
+            top: auto;
+            background-color: transparent !important;
+
+            & ul {
+                margin-left: 0;
+                width: initial !important;
+                border-top: none;
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__navbar-list {
+        //display: none;
+        @include min-lg {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__navbar-list-item {
+        border-bottom: solid 1px $gray-200;
+        font-weight: $normal;
+        position: relative;
+        @include transition;
+        @include uppercase;
+
+        & a {
+            font-size: 0.7rem;
+            padding: 0.8125rem;
+            display: block;
+        }
+
+        & img {
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: rotate(-90deg) translateX(50%);
+            @include min-lg {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background-color: $gray-100;
+        }
+
+        @include min-lg {
+            border-bottom: solid 2px transparent;
+            padding: 0.5rem 0;
+            & a {
+                font-size: 0.8125rem;
+                padding: 0;
+            }
+            &:hover {
+                border-color: initial;
+                background-color: initial;
+            }
+        }
+    }
+}
+
+@keyframes slideToBottom {
+    from {
+        top: -9rem;
+    }
+    to {
+        top: 0;
+    }
+}

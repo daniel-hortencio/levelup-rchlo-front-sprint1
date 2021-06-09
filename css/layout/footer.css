@@ -1,0 +1,24 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 8  | /     @include min-lg {
+ * 9  | |         &__offers-container {
+ * 10 | |             display: flex;
+ * 11 | |             width: 100%;
+ * 12 | |             & > div:first-child {
+ * 13 | |                 flex: auto;
+ * 14 | |             }
+ * 15 | |         }
+ * 16 | \     }
+ *    '
+ *   scss\layout\footer.scss 8:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 8  \2502  \250c      @include min-lg {\a 9  \2502  \2502          &__offers-container {\a 10 \2502  \2502              display: flex;\a 11 \2502  \2502              width: 100%;\a 12 \2502  \2502              & > div:first-child {\a 13 \2502  \2502                  flex: auto;\a 14 \2502  \2502              }\a 15 \2502  \2502          }\a 16 \2502  \2514      }\a    \2575 \a   scss\\layout\\footer.scss 8:5  root stylesheet";
+}

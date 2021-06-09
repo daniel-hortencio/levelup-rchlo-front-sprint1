@@ -1,0 +1,11 @@
+.Main {
+    border-bottom: solid 3px $gray-200;
+    padding-bottom: 3rem;
+
+    &__container {
+        padding-top: 8rem;
+        @include min-lg {
+            padding: 0.5rem 4rem;
+        }
+    }
+}

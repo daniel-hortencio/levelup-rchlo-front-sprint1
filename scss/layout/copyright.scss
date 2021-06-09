@@ -1,0 +1,85 @@
+.Copyright {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include min-lg {
+        background: $gray-200;
+        padding: 2rem 0;
+    }
+
+    &__container {
+        @include min-lg {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        margin: auto;
+        margin-bottom: 1rem;
+
+        & > p:first-child {
+            max-width: 36rem;
+            margin: auto;
+            margin-bottom: 1rem;
+            @include min-lg {
+                max-width: initial;
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            font-size: 0.6rem;
+            line-height: 1.4em;
+        }
+
+        @include min-lg {
+            max-width: initial;
+            margin: 0 8rem 0 0;
+        }
+    }
+
+    &__more-informations {
+        overflow: hidden;
+        height: 0;
+
+        @include transition;
+
+        & > p {
+            @include transition;
+        }
+
+        &[aria-expanded="true"] {
+            height: initial;
+        }
+
+        @include min-lg {
+            height: initial !important;
+        }
+    }
+
+    &__button-read-more {
+        display: block;
+        margin: 0 auto 0 auto;
+        font-weight: $bold;
+        text-decoration: underline;
+        padding: 1rem 0.5rem;
+        border-radius: 0.25rem;
+
+        @include transition;
+
+        @include min-lg {
+            display: none;
+        }
+
+        &:hover {
+            background: $gray-100;
+            text-decoration: none;
+        }
+    }
+
+    &__complaints {
+        text-align: center;
+    }
+}

@@ -1,0 +1,19 @@
+/* Error: Undefined mixin.
+ *   ,
+ * 4 | /     @include min-lg {
+ * 5 | |         display: flex;
+ * 6 | |         align-items: center;
+ * 7 | \     }
+ *   '
+ *   scss\layout\mobile-apps.scss 4:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 4 \2502  \250c      @include min-lg {\a 5 \2502  \2502          display: flex;\a 6 \2502  \2502          align-items: center;\a 7 \2502  \2514      }\a   \2575 \a   scss\\layout\\mobile-apps.scss 4:5  root stylesheet";
+}
