@@ -14,10 +14,10 @@ function changeModal() {
     interestsContainer.setAttribute("aria-expanded", modalIsOpen)
 }
 
-function closeModal() {
+function closeInterestsModal() {
     modalIsOpen = false;
     interestsContainer.setAttribute("aria-expanded", modalIsOpen)
 }
 
 interestsToggle.onclick = () => changeModal();
-interestsModalBackground.onclick = () => closeModal();
+interestsModalBackground.onclick = () => closeInterestsModal();
