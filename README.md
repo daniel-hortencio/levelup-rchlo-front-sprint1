@@ -1,5 +1,7 @@
 # front-sprint1
 
+[Ver projeto online](https://thirsty-hodgkin-1abe18.netlify.app)
+
 Este projeto está configurado com o _livereload_, desta forma, todas as alterações que forem feitas serão carregadas imediatamente no navegador sem necessidade de atualização manual da página (`F5`).
 
 Para executar este projeto, abra um terminal e execute:
