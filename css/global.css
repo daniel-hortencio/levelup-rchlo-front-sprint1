@@ -435,6 +435,7 @@ input {
 @media (min-width: 1280px) {
   .Filters__options {
     position: relative;
+    z-index: 1;
     height: initial;
     transform: translateX(0);
     box-shadow: none !important;

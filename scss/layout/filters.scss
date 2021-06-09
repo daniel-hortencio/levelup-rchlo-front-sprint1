@@ -102,6 +102,7 @@
 
         @include min-lg {
             position: relative;
+            z-index: 1;
             height: initial;
             transform: translateX(0);
             box-shadow: none !important;
